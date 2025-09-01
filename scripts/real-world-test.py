@@ -8,7 +8,7 @@ from ultralytics import solutions
 # --- USER CONFIGURATION ---
 
 # Path to your video file
-VIDEO_PATH = "../testvideo/ncthach2.mov"
+VIDEO_PATH = "../testvideos/ncthach2.mov"
 
 # 2. SET THE PATH TO YOUR REGIONS CONFIGURATION FILE
 CONFIG_FILE_PATH = "../configs/regions.json"
@@ -17,14 +17,14 @@ CONFIG_FILE_PATH = "../configs/regions.json"
 # Get the base name of the input video (e.g., "tohuu" from "tohuu.mov")
 video_base_name = os.path.splitext(os.path.basename(VIDEO_PATH))[0]
 # Create a unique output filename, e.g., "tohuu_output.avi"
-OUTPUT_VIDEO_PATH = f"{video_base_name}_output.avi"
+OUTPUT_VIDEO_PATH = f"../testvideos/{video_base_name}_output_botsort.avi"
 
 # Process only the first N seconds of the video. Set to 0 to process the full video.
-TIME_LIMIT_SECONDS = 50
+TIME_LIMIT_SECONDS = 65
 
 # YOLO model to use for detection
 
-MODEL_PATH = "testrun/yolov8s_traffic_default/weights/best.pt"
+MODEL_PATH = "testrun/yolov8m_traffic_default/weights/best.pt"
 
 # # Define your multiple regions here
 # REGIONS_CONFIG = [
@@ -93,7 +93,7 @@ for config in REGIONS_CONFIG:
         model=MODEL_PATH,
         classes=config["classes"] if config["classes"] else None,
         # Change tracking algorithm here
-        tracker="bytetrack.yaml",
+        tracker="botsort.yaml",
     )
     counters.append(counter)
 
