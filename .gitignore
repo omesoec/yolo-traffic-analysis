@@ -14,6 +14,7 @@ frames_for_roboflow/
 
 # Ignore datasets
 datasets/
+datasets_merged/
 testvideos/
 
 # Ignore output directories from YOLO and other tools
