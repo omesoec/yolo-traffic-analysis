@@ -13,7 +13,7 @@ ENABLE_AGGRESSIVE_AUGMENTATION = True
 # 1. BASE MODEL FOR TRANSFER LEARNING
 #    Choose the pre-trained model to start from. You selected 'yolov8l.pt' for high accuracy.
 #    Options: 'yolov8n.pt', 'yolov8s.pt', 'yolov8m.pt', 'yolov8l.pt', 'yolov8x.pt'
-BASE_MODEL = 'yolov8m.pt'
+BASE_MODEL = 'testrun/yolov8m_augmented/weights/last.pt'
 
 # 2. DATASET CONFIGURATION FILE
 #    Path to your dataset.yaml file. This file tells YOLO where your data is and what the classes are.
@@ -24,8 +24,8 @@ DATASET_CONFIG = '../datasets_merged/dataset.yaml'
 #    - imgsz: The image size the model will be trained on. 640 is standard for YOLOv8.
 #             Larger sizes (e.g., 1280) can improve accuracy for small objects but require more VRAM.
 EPOCHS = 100
-IMAGE_SIZE = 800
-BATCH_SIZE = 16 # Adjust based on your GPU memory. 16 is a good starting point for most GPUs.
+IMAGE_SIZE = 900
+BATCH_SIZE = 11 # Adjust based on your GPU memory. 16 is a good starting point for most GPUs.
 # 4. OUTPUT CONFIGURATION
 #    - project: The name of the main output directory for all experimental runs.
 #    - experiment_name: A unique, descriptive name for this specific training run. This will also be
@@ -58,6 +58,7 @@ def train_model():
     # --- Define Augmentation Parameters ---
     # Create a dictionary to hold our training arguments.
     train_args = {
+        'resume': True,
         'data': DATASET_CONFIG,
         'epochs': EPOCHS,
         'imgsz': IMAGE_SIZE,
