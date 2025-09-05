@@ -5,10 +5,10 @@ import sys
 # --- USER CONFIGURATION ---
 
 # 1. Path to the video you want to process
-VIDEO_PATH = "ncthach2.mov"
+VIDEO_PATH = "../testvideos/ncthach2.mov"
 
 # 2. Name for the output image file
-OUTPUT_IMAGE_NAME = "first_frame.jpg"
+OUTPUT_IMAGE_NAME = "first_frame2.jpg"
 
 # --- END OF CONFIGURATION ---
 

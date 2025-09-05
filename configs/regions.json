@@ -1,48 +1,38 @@
 {
-    "tohuu.mov": [
+  "tohuu.mov": {
+    "regions":[
       {
         "name": "Motorcycle Zone",
-        "points": [
-          [877, 261],
-          [1193, 295],
-          [991, 407],
-          [616, 369]
-        ],
-        "classes": [
-        ],
-        "color": [
-          0,
-          0,
-          255
-        ]
+        "points": [[877, 261],[1193, 295],[991, 407],[616, 369]],
+        "classes": [],
+        "color": [0, 0, 255]
       },
       {
         "name": "Car Zone",
-        "points": [
-            [1379, 245],
-            [1752, 277],
-            [1773, 471],
-            [1156, 422]
-        ],
+        "points": [[1379, 245], [1752, 277],[1773, 471],[1156, 422]],
         "classes": [],
-        "color": [
-          255,
-          0,
-          0
-        ]
+        "color": [255, 0, 0]
       },
       {
         "name": "Free Zone",
         "points": [[404, 406], [886, 467], [15, 1076], [10, 596]],
         "classes": [],
-        "color": [
-          255,
-          0,
-          0
-        ]
+        "color": [255, 0, 0]
       }
     ],
-    "ncthach2.mov": [
+    "homography": {
+    "pixel_points_ordered": [
+      [1735, 556], 
+      [1076, 491], 
+      [1140, 443], 
+      [1735, 497]
+    ],
+    "real_width_m": 12.6,
+    "real_height_m": 3
+    }
+  },
+ "ncthach2.mov": {
+    "regions": [
       {
         "name": "Zone 1",
         "points": [[708, 130], [804, 151], [616, 191], [503, 171]],
@@ -67,5 +57,16 @@
         "classes": [],
         "color": []
       }
-    ]
+    ],
+    "homography": {
+      "pixel_points_ordered": [
+        [1420, 1000],
+        [936, 1022],
+        [1120, 824],
+        [1513, 802]
+      ],
+      "real_width_m": 4.0,
+      "real_height_m": 15.0
+    }
   }
+}
